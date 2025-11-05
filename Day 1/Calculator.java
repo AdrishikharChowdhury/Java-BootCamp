@@ -21,35 +21,34 @@ public class Calculator {
             System.out.print("Your choice: ");
             int choice = sc.nextInt();
             switch (choice) {
-                case 1 -> {
+                case 1:
                     result = num1 + num2;
                     System.out.println("The result is " + result);
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     result = num1 - num2;
                     System.out.println("The result is " + result);
-                }
-                case 3 -> {
+                    break;
+                case 3:
                     result = num1 * num2;
                     System.out.println("The result is " + result);
-                }
-                case 4 -> {
+                    break;
+                case 4:
                     if (num2 != 0) {
                         result = num1 / num2;
                         System.out.println("The result is " + result);
                     } else {
                         System.out.println("You cannot divide a number by 0");
                     }
-                }
-                case 5 -> {
+                    break;
+                case 5:
                     System.out.println("Thank you for using this calculator");
-                    isOn=false;
-                }
-                default -> {
+                    isOn = false;
+                    break;
+                default:
                     System.out.println("Wrong Choice");
-                }
             }
         }
-
+        sc.close();
     }
 }
