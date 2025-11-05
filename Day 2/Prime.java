@@ -6,7 +6,6 @@ public class Prime {
 
         System.out.print("Enter the number: ");
         int num = sc.nextInt();
-        boolean flag = false;
 
         if (num == 0 || num == 1) {
             System.out.println(num + " is neither prime nor a composite number");
@@ -14,12 +13,7 @@ public class Prime {
             return;
         }
 
-        for (int i = 2; i*i < num; i++) {
-            if (num % i == 0) {
-                flag = true;
-                break;
-            }
-        }
+        boolean flag = prime(num);
 
         if (!flag) {
             System.out.println(num + " is a Prime Number");
@@ -27,5 +21,16 @@ public class Prime {
             System.out.println(num + " is not a Prime Number");
         }
         sc.close();
+    }
+
+    public static boolean prime(int num) {
+        boolean flag = false;
+        for (int i = 2; i * i < num; i++) {
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+        }
+        return flag;
     }
 }
