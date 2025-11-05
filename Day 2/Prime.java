@@ -10,6 +10,7 @@ public class Prime {
 
         if (num == 0 || num == 1) {
             System.out.println(num + " is neither prime nor a composite number");
+            sc.close();
             return;
         }
 
